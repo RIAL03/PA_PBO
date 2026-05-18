@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="org.example.pa_pbo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+    </padding>
+
+    <Label style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-text-fill: #2c3e50;" text="🏋️‍♂️ MULAWARMAN FITNESS" />
+
+    <Separator />
+
+    <Label style="-fx-font-weight: bold; -fx-text-fill: #7f8c8d;" text="Form Pendaftaran Member Baru" />
+
+    <GridPane hgap="15" vgap="12">
+        <Label text="Nama Lengkap:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="fldNama" prefWidth="300.0" promptText="Masukkan nama..." GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="ID Member:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="fldId" promptText="Contoh: M001" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Tipe Layanan:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="comboTipe" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Biaya Harian (Rp):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="fldBiaya" promptText="Hanya untuk Reguler" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Nomor Loker:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="fldLoker" promptText="Hanya untuk VIP" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <columnConstraints>
+            <ColumnConstraints minWidth="120" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button text="➕ Tambah Member" onAction="#onTambahClick" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <Button text="📋 Lihat Data" onAction="#onLihatClick" style="-fx-cursor: hand;"/>
+    </HBox>
+
+    <Separator />
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Menu Aksi:" style="-fx-font-weight: bold;"/>
+        <Button text="🗑️ Hapus Member" onAction="#onHapusClick" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-cursor: hand;"/>
+        <Button text="✅ Absen Masuk" onAction="#onAbsenClick" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+    </HBox>
+
+    <TextArea fx:id="txtAreaOutput" editable="false" prefHeight="150.0" prefWidth="450.0" style="-fx-font-family: 'Consolas', monospace;" promptText="Sistem log output akan tampil di sini..."/>
+</VBox>
