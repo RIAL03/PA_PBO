@@ -27,4 +27,8 @@ public abstract class Member {
     public String getInfo(String salam) {
         return salam + ", " + nama + "!\nID: " + id + " | Nama: " + nama + " | Tipe: " + getTipe();
     }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
 }

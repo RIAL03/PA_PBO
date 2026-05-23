@@ -54,8 +54,14 @@
 
     <HBox spacing="10" alignment="CENTER_LEFT">
         <Label text="Menu Aksi:" style="-fx-font-weight: bold;"/>
-        <Button text="🗑️ Hapus Member" onAction="#onHapusClick" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-cursor: hand;"/>
-        <Button text="✅ Absen Masuk" onAction="#onAbsenClick" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <Button text="🗑️ Hapus Member" onAction="#onHapusClick"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-cursor: hand;"/>
+
+        <Button text="✏️ Edit Member" onAction="#onEditClick"
+                style="-fx-background-color: #f1c40f; -fx-text-fill: #2c3e50; -fx-font-weight: bold; -fx-cursor: hand;"/>
+
+        <Button text="✅ Absen Masuk" onAction="#onAbsenClick"
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
     </HBox>
 
     <TextArea fx:id="txtAreaOutput" editable="false" prefHeight="150.0" prefWidth="450.0" style="-fx-font-family: 'Consolas', monospace;" promptText="Sistem log output akan tampil di sini..."/>

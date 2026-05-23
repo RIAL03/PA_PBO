@@ -17,12 +17,16 @@ public class MemberVIP extends Member implements LayananTambahan {
     }
 
     @Override
-    public String hitungDiskon(int totalBelanja) {
-        return "Diskon VIP (15%): Rp" + (totalBelanja * 0.15);
+    public String ambilFasilitas() {
+        return "Akses Semua Area + Sauna + Handuk";
     }
 
     @Override
-    public String berikanPoin(int totalBelanja) {
-        return "Poin Baru (Bonus VIP 2x): " + ((totalBelanja / 10000) * 2);
+    public String ambilBonusSuplemen() {
+        return "1 Botol Whey Protein / Bulan";
+    }
+
+    public void setLoker(String loker) {
+        this.loker = loker;
     }
 }

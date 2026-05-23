@@ -17,12 +17,17 @@ public class MemberReguler extends Member implements LayananTambahan {
     }
 
     @Override
-    public String hitungDiskon(int totalBelanja) {
-        return "Diskon Reguler (5%): Rp" + (totalBelanja * 0.05);
+    public String ambilFasilitas() {
+        return "Akses Area Gym Utama";
     }
 
     @Override
-    public String berikanPoin(int totalBelanja) {
-        return "Poin Baru: " + (totalBelanja / 10000);
+    public String ambilBonusSuplemen() {
+        return "Tidak Ada Bonus";
+    }
+
+    // tambahkan di dalam class MemberReguler
+    public void setBiaya(int biaya) {
+        this.biaya = biaya;
     }
 }
